@@ -9,7 +9,7 @@ import SettingsContext from "./SettingsContext";
 
 const Timer = () => {
   const settingsInfo = useContext(SettingsContext);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
   const [mode, setMode] = useState("work"); //work / break / null
   const [secondsLeft, setSecondsLeft] = useState(0);
 
@@ -77,7 +77,23 @@ const Timer = () => {
           backgroundColor: "#3e98c7",
         })}
       />
-      <div>{isPaused ? <PlayButton /> : <PauseButton />}</div>
+      <div>
+        {isPaused ? (
+          <PlayButton
+            onClick={() => {
+              setIsPaused(false);
+              isPausedRef.current = false;
+            }}
+          />
+        ) : (
+          <PauseButton
+            onClick={() => {
+              setIsPaused(true);
+              isPausedRef.current = true;
+            }}
+          />
+        )}
+      </div>
       <div>
         <SettingsButton
           onClick={() => {
