@@ -23,6 +23,59 @@ main {
   margin: 0 auto;
   text-align: center;
 }
+/* title */
+h2 {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+h2:hover {
+  cursor: default;
+  color: gray;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+/* NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+.logo:hover {
+  cursor: default;
+}
+/* -------------------------------------------------------- */
 button {
   margin-top: 5vh;
   background-color: transparent;

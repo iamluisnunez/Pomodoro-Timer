@@ -6,6 +6,7 @@ import PlayButton from "./PlayButton";
 import SettingsButton from "./SettingsButton";
 import { useContext, useState, useEffect, useRef } from "react";
 import SettingsContext from "./SettingsContext";
+import Nav from "./Nav";
 
 const Timer = () => {
   const settingsInfo = useContext(SettingsContext);
@@ -66,6 +67,7 @@ const Timer = () => {
 
   return (
     <div>
+      <Nav />
       <CircularProgressbar
         value={percentage}
         text={`${minutes} : ${seconds}`}
