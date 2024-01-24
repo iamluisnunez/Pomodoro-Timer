@@ -24,3 +24,20 @@ client.query("Select * FROM past_timers", (err, res) => {
   }
   client.end;
 });
+
+const insertTimerData = async (timer_duration) => {
+  try {
+    await client.connect();
+    const result = await client.query(
+      "INSERT INTO past_timers (timer_duration) VALUES ($1) RETURNING *",
+      [timer_duration]
+    );
+    return result.row[0];
+  } finally {
+    await client.end();
+  }
+};
+
+module.exports = {
+  insertTimerData,
+};

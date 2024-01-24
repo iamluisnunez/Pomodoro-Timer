@@ -7,6 +7,7 @@ import SettingsButton from "./SettingsButton";
 import { useContext, useState, useEffect, useRef } from "react";
 import SettingsContext from "./SettingsContext";
 import Nav from "./Nav";
+import ResetButton from "./ResetButton";
 
 const Timer = () => {
   const settingsInfo = useContext(SettingsContext);
@@ -95,6 +96,11 @@ const Timer = () => {
             }}
           />
         )}
+        <ResetButton
+          onClick={() => {
+            settingsInfo.workMinutes = 0;
+          }}
+        />
       </div>
       <div>
         <SettingsButton
