@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/my-react-vite-app/", // Set the correct base path
+  base: "/", // Set the correct base path
   plugins: [react()],
   optimizeDeps: {
     exclude: [
