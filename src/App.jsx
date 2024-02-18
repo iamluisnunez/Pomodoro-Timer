@@ -17,7 +17,6 @@ function App() {
 
   return (
     <>
-      <AppRoutes />
       <main>
         <SettingsContext.Provider
           value={{
